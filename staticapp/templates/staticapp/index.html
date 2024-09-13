@@ -1,0 +1,336 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!--css file link-->
+       {% block my %}
+
+       <link rel="stylesheet" type="text/css" href="{% static '/staticapp/css/style.css' %}">
+  
+       {% endblock my %}
+      
+       
+       <!--bootstrap css link-->
+       <link rel="stylesheet" href="{% static 'staticapp/css/bootstrap.min.css' %}">
+
+       <!--fontawsome link-->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+       
+
+
+    <title>my</title>
+</head>
+<body>
+ <section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="#"><img src="{% static 'staticapp/images/logo2.png' %}" ></a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <i class="fa fa-bars"></i>
+           </button>
+             <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                   <li class="nav-item">
+                     <a class="nav-link menu" href="/"></i>HOME</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link menu" href="about">ABOUT US</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link menu" href="vision">VISION</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link  menu" href="program">PROGRAMS</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link  menu btn btn-outline-defualt" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">LOGIN</a>
+                   </li>
+                    <li class="nav-item">
+                     <a class="nav-link  menu btn btn-outline-defualt" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@mdo">SIGN-UP</a>
+                   </li>
+                </ul>
+             </div>
+     </div>
+   </nav>
+ </section>
+
+
+ <!----------login section---------------->
+
+                
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+
+    <section class="container ">
+        <div class="row content d-flex justify-content-center  pt-5 ">
+            <div class="col-md-10 ">
+                <div class="box shadow-lg bg-white p-0 ftb1">
+                    <div class="modal-header">
+                    <h3 class="mb-4 text-center fs-1 modal-title " id="exampleModalLabel">Login Form</h3>
+                    <button type="button" class="btn-close  mb-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                     <div class="modal-body ">
+                    <form class="mb-3">
+                        <div class="form-floating mb-3">
+                          <input type="email" class="form-control rounded-0" id="floating" placeholder="name@gmail.com">
+                          <label for="floatinginput">email</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                          <input type="password" class="form-control rounded-0" id="floating" placeholder="password">
+                          <label for="floatingPassword">Password</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+                            <label class="form-check-label">Remember me</label>
+                        </div>
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="button" class="btn btn-dark btn-lg border-0 rounded-0">Login</button>
+                        </div>
+                        <div class="forgot-password-link mb-3 d-flex justify-content-lg-end">
+                            <a href="#" title="forgot password" class="text-decoration-none">Forgot Passwaord?</a>
+                        </div>
+                        <div class="sign-up-accounts">
+                             <p class="text-center">Or Sign UP</p>
+                             <div class="social-accounts d-flex justify-content-center">
+                              <a href="#" title="facebook"><i class="fa fa-facebook"></i> </a>
+                              <a href="#" title="twitter"><i class="fa fa-twitter"></i> </a>
+                              <a href="#" title="google"><i class="fa fa-google"></i> </a>
+                             </div>
+                        </div>
+                    </form>
+                     </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+</div>
+</div>
+</div>
+ <!----------login section---------------->
+
+  <!----------signup section---------------->
+
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content content1">
+      
+
+    <section class="container ">
+        <div class="row content d-flex justify-content-center  pt-3 ">
+            <div class="col-md-10 ">
+                <div class="box shadow-lg bg-white p-0 ftb1">
+                    <div class="modal-header">
+                    <h3 class="mb-4 text-center fs-1 modal-title " id="exampleModalLabel1">Sign-Up Form</h3>
+                    <button type="button" class="btn-close  mb-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                     <div class="modal-body ">
+                    <form class="mb-3">
+                        <div class="form-floating mb-3">
+                          <input type="name" class="form-control rounded-0" id="floating" placeholder="name@gmail.com">
+                          <label for="floatinginput">Full-Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="email" class="form-control rounded-0" id="floating" placeholder="name@gmail.com">
+                          <label for="floatinginput">Email</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                          <input type="password" class="form-control rounded-0" id="floating" placeholder="password">
+                          <label for="floatingPassword">Password</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="password" class="form-control rounded-0" id="floating" placeholder="password">
+                          <label for="floatingPassword">Re-enter Password</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+                            <label class="form-check-label">All information correct</label>
+                        </div>
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="button" class="btn btn-dark btn-lg border-0 rounded-0">Sign-Up</button>
+                        </div>
+                        <div class="forgot-password-link mb-3 d-flex justify-content-lg-end">
+                            <a href="#" title="forgot password" class="text-decoration-none">Log-In?</a>
+                        </div>
+                        <div class="sign-up-accounts">
+                             <p class="text-center">Or Sign UP</p>
+                             <div class="social-accounts d-flex justify-content-center">
+                              <a href="#" title="facebook"><i class="fa fa-facebook"></i> </a>
+                              <a href="#" title="twitter"><i class="fa fa-twitter"></i> </a>
+                              <a href="#" title="google"><i class="fa fa-google"></i> </a>
+                             </div>
+                        </div>
+                    </form>
+                     </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+</div>
+</div>
+</div>
+
+  <!----------end signup section---------------->
+{% block content %}
+ <!----------banner section---------------->
+
+   <section id="banner">
+     <div class="container ">
+        <div class="row">
+            <div class="col-md-6 ">
+                <p class="promo-title">Wastes Solution, Here</p>
+                <p>The topics covered in the publication include waste generation, waste collection, waste treatment and disposal, financing models, operational models, technologies, citizen engagement, environmental impact, and informal sector impact.</p>
+                <a href="https://youtu.be/cdoLTvJrJ18 "><img src="{% static 'staticapp/images/play.png' %}"n class=" play-btn playbt"> </i>Watch tutorial</a>
+            </div>
+            <div class="col-md-6 text-center diff">
+              <div class="myji shadow-lg rounded"><img src="{% static 'staticapp/images/wastelogo.svg' %}" class="img-fluid"></div>
+            </div>
+        </div>
+     </div>
+      
+              <img src="{% static 'staticapp/images/wave1.png' %}" class="bottom-img">
+
+   </section>
+
+   <!-------------service section------------->
+
+   <section id="services">
+     <div class="container text-center">
+        <h1 class="title">WHAT WE DO ?</h1>
+        <div class="row text-center">
+            <div class="col-md-4 services ">
+               <img src="{% static 'staticapp/images/ic1.png' %}" class="service-img">
+               <h4>WASTE HANDLING</h4>
+               <p> waste handling correctly is important in reducing pollution and providing a healthy environment. Mismanagement of waste can cause water contamination, soil erosion and air contamination.</p>
+            </div>
+            <div class="col-md-4 services ">
+               <img src="{% static 'staticapp/images/service3.png' %}" class="service-img">
+               <h4>EDUCATING PEOPLES</h4>
+               <p>You also need to educate them about the typical kinds of waste that lead to environmental pollution. Students need to know the proper collection and disposal methods of such waste.</p>
+            </div>
+            <div class="col-md-4 services">
+               <img src="{% static 'staticapp/images/service2.png' %}" class="service-img">
+               <h4>AWARENESS PROGRAM</h4>
+               <p>Starting a green club at school, colleges and Societies helps in creating environmental awareness. This helps to give the  club a purpose and ensures students <br>stay focused.</p>
+            </div>
+        </div>
+               <button type="button" class="btn btn-primary">All Services</button>
+     </div>
+   </section>
+
+    <!-------------About us------------->
+
+    <section id="about-us">
+       <div class="container">
+         <h1 class="title text-center">Why Choose Us ?</h1>
+         <div class="row">
+            <div class="col-md-6 about-us">
+            <p class="about-title">Why we are different</p>
+                <ul>
+                    <li>We are Providing effective waste management system. </li>
+                    <li>We are Providing effec-->tive wastes handling system.</li>
+                    <li>concept of waste management is a reduce and recycle. </li>
+                    <li>Running an awareness program for people of littering.</li>
+                    <li>We are teaching peoples how to reduce-> waste easily.</li>
+                    <li>We trying to make a healthy environment for everyone.</li>
+                    <li>Our goals to make ->earth wastes free and pure natural. </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <div class="diff "><img src="{% static 'staticapp/images/network.png' %}" class="img-fluid "></div>
+            </div>
+         </div>
+       </div>
+    </section>
+
+   
+
+    <!-------------Testimonials------------->
+
+    <section id="Testimonials">
+        <div class="container">
+            <h1 class="title text-center">What client say</h1>
+            <div class="row offset-1">
+                <div class="col-md-5 Testimonials">
+                    <p>Thank you a lot, the information is very useful for me and i also attend your awareness program that was fabulous and i gain lot's off knowledge in this program.</p>
+                    <img src="{% static 'staticapp/images/user1.jpg' %}" class="shadow-lg">
+                    <p class="details"><b>Agelina</b><br>from indore (m.p)</p>
+
+                </div>
+                <div class="col-md-5 Testimonials">
+                    <p>Thak you for this tutorial, its so useful and your explanation is off that charts because you teaches everysingle point to point and provide veru useful information. </p>
+                    <img src="{% static 'staticapp/images/user2.jpg' %}" class="shadow-lg">
+                    <p class="details"><b>Jhon</b><br>from bhopal (m.p)</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    {% endblock content %}
+
+    <!-------------Testimonials------------->
+
+    <section id="social-media">
+        <div class="container text-center">
+            <p>Find US ON SOCIAL MEDIA</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/mywastesolution"><img src="{% static 'staticapp/images/facebook-icon.png' %}"> </a>
+                <a href="https://instagram.com/wastesolutionstn?igshid=YmMyMTA2M2Y="><img src="{% static 'staticapp/images/instagram-icon.png' %}"> </a>
+                <a href="https://twitter.com/eco_waste"><img src="{% static 'staticapp/images/twitter-icon.png' %}"> </a>
+                <a href="https://web.whatsapp.com/"><img src="{% static 'staticapp/images/whatsapp-icon.png' %}"> </a>
+                <a href="https://www.linkedin.com/jobs/search?keywords=waste%20solution&location=United%20States&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&position=1&pageNum=0"><img src="{% static 'staticapp/images/linkedin-icon.png' %}"> </a>
+                <a href="https://www.snapchat.com/"><img src="{% static 'staticapp/images/snapchat-icon.png' %}"> </a>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-------------footer-section------------->
+
+    <section id="footer">
+        <img src="{% static 'staticapp/images/wave2.png' %}" class="footer-img">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-4 footer-box">
+                    <img src="{% static 'staticapp/images/logo2.png' %}">
+                    <p> We are available 24/7 and a live chat on our website. we respond to your inquiries fast and in a friendly manner.If you complains about a specific issue, so we trying to instance address it and ensure it does not occur in the future.</p>
+                </div>
+                <div class="col-md-4 footer-box">
+                    <p><b>CONTACT US</b> </p>
+                    <p><i class="fa fa-map-marker"></i> waste solution center, banglor</p>
+                    <p> <i class="fa fa-phone"></i> +91-8269954482</p>
+                    <p><i class="fa fa-envelope-o"></i> wastesol@gmail.com</p>
+                </div>
+                <div class="col-md-4 footer-box">
+                    <p><b>SUBSCRIBE NEWSLETTER</b> </p>
+                    <input type="email"  class="form-control" placeholder="your email">
+                    <button type="button" class="btn btn-primary">Subscribe</button>
+                </div>
+
+            </div>
+            <hr>
+            <p class="copyright">www.wasteolution.com</p>
+        </div>
+
+    </section>
+
+   
+<script src="{% static 'staticapp/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
